@@ -5,7 +5,7 @@ NameSpace GeoBox {
 
 	class Simple {
 		function __construct() {
-			return 'Hello Geobox!';
+			echo "Hello Geobox!\n";
 		}
 	}
 }
