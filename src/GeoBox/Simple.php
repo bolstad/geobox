@@ -18,7 +18,7 @@ NameSpace GeoBox {
 		 * @param type    $y
 		 * @return type
 		 */
-		function pointInPolygon( $polySides, $polyX, $polyY, $x, $y ) {
+		function isPointInPolygon( $polySides, $polyX, $polyY, $x, $y ) {
 			$j = $polySides-1 ;
 			$oddNodes = 0;
 			for ( $i=0; $i<$polySides; $i++ ) {
