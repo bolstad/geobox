@@ -11,14 +11,14 @@ NameSpace GeoBox {
 		/**
 		 * Based on the concept by David Strachan, http://stackoverflow.com/a/19103041
 		 *
-		 * @param type    $polySides
-		 * @param type    $polyX
-		 * @param type    $polyY
-		 * @param type    $x
-		 * @param type    $y
-		 * @return type
+		 * @param array    $polyX
+		 * @param array    $polyY
+		 * @param float    $x
+		 * @param float    $y
+		 * @return int
 		 */
-		function isPointInPolygon( $polySides, $polyX, $polyY, $x, $y ) {
+		function isPointInPolygon( $polyX, $polyY, $x, $y ) {
+            $polySides = count( $polyX ); 
 			$j = $polySides-1 ;
 			$oddNodes = 0;
 			for ( $i=0; $i<$polySides; $i++ ) {
