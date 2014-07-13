@@ -5,7 +5,6 @@ NameSpace GeoBox {
 
 	class Simple {
 		function __construct() {
-			echo "Hello Geobox!\n";
 		}
 
 		/**
@@ -39,5 +38,18 @@ NameSpace GeoBox {
 				$j=$i; }
 
 			return $oddNodes; }
+
+		function isPointObjInPolygon( $pointObj, $polygonObj ) {
+			return  $this->isPointInPolygon(
+				$polygonObj->getPolyX(),
+				$polygonObj->getPolyY(),
+				$pointObj->getX(),
+				$pointObj->getY()
+			);
+		}
+
+
 	}
+
+
 }
